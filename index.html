@@ -1,0 +1,57 @@
+<style>
+body{
+    background-color: black;
+}
+h1 {
+    margin: 0;
+}
+
+button{
+    cursor: pointer;
+}
+button:hover{
+    background-color: #635e5e;
+}
+</style>
+<div style = "display: inline-block; position: relative; top: 0; right: 0; bottom: 0; left: 0;">
+<div 
+id = "overlappingDiv"
+style = "
+background-color: black;
+position: absolute; 
+top: 0; right: 0; bottom: 0; left: 0; opacity: 0; pointer-events: none;">
+</div>
+<div style="background-color: white; width: 250px; position: absolute; top: 50px; left: 50px; border: 4px black solid; padding: 12px;">
+<h1> Caterpi</h1>
+<div style="position: relative;">
+<div style = "height: 10px; background-color: #ccc"></div>
+<div style = "height: 10px; background-color: #0ab927; position: absolute; top: 0; left: 0; right: 0;"></div>
+</div>
+
+</div>
+
+
+<canvas></canvas>
+<div style = "background-color: white; height: 115; position: absolute; bottom: 0; left: 0; right: 0; border: 4px black solid; display: flex;">
+<div style = "width: 66.66%; display: grid;
+grid-template-columns: repeat(2, 1fr)
+">
+<button>Attack1</button>
+<button>Attack2</button>
+</div>
+<div style="display: flex; 
+align-items: center; 
+justify-content: center; 
+width: 33.33%;
+border-left: 4px black solid;
+">
+<h1>Attack Type</h1>
+</div>
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src = "data/battleZones.js"></script>
+<script src ="data/collisions.js"></script>
+<script src = "classes.js"></script>
+<script src ="index.js"></script>
