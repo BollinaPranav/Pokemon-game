@@ -82,8 +82,8 @@ playerRightImage.src = './img/playerRight.png'
     },
     image: playerImage,
     frames: {
-        max:4,
-        hold: 5,
+        max:3.6,
+        hold: 10,
         error: 7
 
     },
@@ -199,6 +199,7 @@ function animate(){
                             duration:0.3,
                             onComplete() {
                                   // activate a new animation loop
+                        initBattle()          
                         animateBattle()
                         gsap.to('#overlappingDiv',{
                             opacity: 0,
@@ -336,56 +337,8 @@ function animate(){
 }
 //animate()
 
-const battleBackgroundImage = new Image()
-battleBackgroundImage.src = './img/battleBG.png'
-const battleBackground = new Sprite({position:{
-    x:0, 
-    y:0
-},
-image: battleBackgroundImage
-})
-
-const caterpiImage = new Image()
-caterpiImage.src = './img/caterpi1.png'
-const caterpi = new Sprite({
-    position: {
-        x: 730,
-        y: 300
-    },
-    image: caterpiImage,
-    frames: {
-        max: 8,
-        hold: 10,
-        error: 0
-    },
-    animate: true
-})
-
-const charmanderImage = new Image()
-charmanderImage.src = './img/charmanderBattle1d.png'
-const charmander = new Sprite({
-    position: {
-        x: 150,
-        y: 400
-    },
-    image: charmanderImage,
-    frames: {
-        max: 9,
-        hold: 10,
-        error: -80
-    },
-    animate: true
-})
 
 
-function animateBattle(){
-    window.requestAnimationFrame(animateBattle)
-    battleBackground.draw()
-    caterpi.draw()
-    charmander.draw()
-}
-
-animateBattle()
 
 let lastkey = ''
 window.addEventListener('keydown', (e) => {
